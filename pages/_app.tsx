@@ -41,7 +41,7 @@ const MyApp = (props: MyAppProps) => {
             messages={intlMessagesDispatcher[language]}
           >
             <CssBaseline />
-            <Header />
+            {/* <Header /> */}
             <Component {...pageProps} />
           </IntlProvider>
         </ThemeProvider>

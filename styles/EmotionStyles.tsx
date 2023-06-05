@@ -10,3 +10,8 @@ export const ThirdPageWrapper = styled.div`
 export const EmotionHeader = styled.h1`
   color: ${(props) => props.theme.colors.primary};
 `;
+export const Test = styled.h1`
+  color : red;
+  width:50%;
+  
+`;
