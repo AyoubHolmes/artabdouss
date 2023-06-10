@@ -1,13 +1,12 @@
-import { HeaderWrapper, NavMenu } from "./Header.style";
+import { HeaderWrapper } from "./Header.style";
 import Logo from "./Logo";
-import Title from "./Title";
+import NavMenu from "./NavMenu";
 
 const Header = () => {
   return (
     <HeaderWrapper>
-      <Title />
-      <NavMenu />
       <Logo />
+      <NavMenu />
     </HeaderWrapper>
   );
 };

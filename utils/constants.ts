@@ -1,5 +1,5 @@
-import { intlMessages } from "./translation";
 import { FlattenedDictionary } from "./translation/utils";
+import { intlMessages } from "./translation";
 
 export enum LANGUAGES {
     FR = "fr",

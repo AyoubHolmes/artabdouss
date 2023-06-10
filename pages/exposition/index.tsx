@@ -1,9 +1,12 @@
-import { NextPage } from "next"
+import Layout from "components/Layout";
+import { NextPage } from "next";
 
 const Exposition: NextPage = () => {
   return (
-    <div>Exposition</div>
-  )
-}
+    <Layout>
+      <div>Exposition</div>
+    </Layout>
+  );
+};
 
 export default Exposition;
