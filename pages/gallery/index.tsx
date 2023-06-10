@@ -1,8 +1,11 @@
+import Layout from "components/Layout";
 import { NextPage } from "next"
 
 const Gallery: NextPage = () => {
   return (
-    <div>Gallery</div>
+    <Layout>
+      <div>Gallery</div>
+    </Layout>
   )
 }
 

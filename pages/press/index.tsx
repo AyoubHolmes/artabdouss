@@ -1,9 +1,12 @@
-import { NextPage } from "next"
+import Layout from "components/Layout";
+import { NextPage } from "next";
 
 const Press: NextPage = () => {
   return (
-    <div>Press</div>
-  )
-}
+    <Layout>
+      <div>Press</div>
+    </Layout>
+  );
+};
 
 export default Press;
