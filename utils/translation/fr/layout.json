@@ -1,5 +1,8 @@
 {
-    "title": "ECOWISE - FR",
-    "sub-title": "HCD Dashboard",
-    "filters": "Filters"
+  "home": "Home",
+  "works": "Works",
+  "gallery": "The gallery",
+  "artist":"The artist",
+  "press": "Press",
+  "contacts": "Contacts"
 }

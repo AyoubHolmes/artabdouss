@@ -36,18 +36,12 @@ export default function MyDocument({ emotionStyleTags }: MyDocumentProps) {
     </Html>
   );
 }
-
-// `getInitialProps` belongs to `_document` (instead of `_app`),
-// it's compatible with static-site generation (SSG).
 MyDocument.getInitialProps = async (ctx: DocumentContext) => {
   const originalRenderPage = ctx.renderPage;
 
-  // You can consider sharing the same Emotion cache between all the SSR requests to speed up performance.
-  // However, be aware that it can have global side effects.
   const cache = createEmotionCache();
   const { extractCriticalToChunks } = createEmotionServer(cache);
 
-  // We're passing `emotionCache` to App component
   ctx.renderPage = () =>
     originalRenderPage({
       enhanceApp: (
@@ -59,8 +53,6 @@ MyDocument.getInitialProps = async (ctx: DocumentContext) => {
     });
 
   const initialProps = await Document.getInitialProps(ctx);
-  // This is important. It prevents Emotion to render invalid HTML.
-  // See https://github.com/mui/material-ui/issues/26561#issuecomment-855286153
   const emotionStyles = extractCriticalToChunks(initialProps.html);
   const emotionStyleTags = emotionStyles.styles.map((style) => (
     <style
@@ -73,7 +65,6 @@ MyDocument.getInitialProps = async (ctx: DocumentContext) => {
 
   return {
     ...initialProps,
-    // return emotionStyleTags as props
     emotionStyleTags,
   };
 };

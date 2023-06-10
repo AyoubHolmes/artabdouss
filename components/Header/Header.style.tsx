@@ -4,8 +4,9 @@ export const HeaderWrapper = styled.div`
   width: 100%;
   height: 5.7rem;
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 2rem;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 0 2rem;
 `;
 
 export const NavMenu = styled.div`
@@ -39,10 +40,52 @@ export const CustomPTag = styled.p`
 `;
 
 export const LogoWrapper = styled.div`
-    margin-top: 1rem;
-    margin-right: 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
 `;
 
 export const FilterWrapper = styled.div`
-    margin-top: 2rem;
-`
+  margin-top: 2rem;
+`;
+
+export const NavMenuWrapper = styled.div`
+  /* padding-right: 3rem; */
+  padding-top: 1rem;
+`;
+
+export const NavMenuPageWrapper = styled.div`
+  position: absolute;
+  height: 100%;
+  top: 0;
+  width: 100%;
+  background-color: rgba(64, 31, 12, 0.96);
+  color: ${({ theme }) => theme.colors.primary};
+`;
+
+export const NavMenuPageHeader = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 0 2rem;
+`;
+
+export const NavMenuPageContent = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+`;
+
+export const NavMenuPageTab = styled.div`
+  padding: 1rem 0;
+  min-height: 48px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4.5rem;
+  line-height: 1;
+  transition: all .8s;
+  overflow: hidden;
+`;

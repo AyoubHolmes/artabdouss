@@ -11,10 +11,8 @@ import {
 import createEmotionCache from "../utils/createEmotionCache";
 import defaultTheme from "../themes/defaultTheme";
 import { emotionTheme } from "../themes/emotionTheme";
-import { useState } from "react";
-import { LANGUAGES, intlMessagesDispatcher } from "../utils/constants";
-import { IntlProvider } from "react-intl";
-import Header from "../components/Header";
+import { LanguageProvider } from "utils/context";
+import "./globals.css";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -25,27 +23,20 @@ export interface MyAppProps extends AppProps {
 }
 
 const MyApp = (props: MyAppProps) => {
-  // If there's no emotionCache rendered by the server, use the clientSideEmotionCache
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
-  const [language, setLanguage] = useState<LANGUAGES>(LANGUAGES.EN);
   return (
     <CacheProvider value={emotionCache}>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-      <EmotionProvider theme={emotionTheme}>
-        <ThemeProvider theme={defaultTheme}>
-          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-          <IntlProvider
-            locale={language}
-            messages={intlMessagesDispatcher[language]}
-          >
+      <LanguageProvider>
+        <EmotionProvider theme={emotionTheme}>
+          <ThemeProvider theme={defaultTheme}>
             <CssBaseline />
-            <Header />
             <Component {...pageProps} />
-          </IntlProvider>
-        </ThemeProvider>
-      </EmotionProvider>
+          </ThemeProvider>
+        </EmotionProvider>
+      </LanguageProvider>
     </CacheProvider>
   );
 };
