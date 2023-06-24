@@ -17,7 +17,8 @@ declare module "@emotion/react" {
       grey: string;
     };
     fonts: {
-      outrequeBlack: string;
+      bacasime: string;
+      playfair: string;
     };
   }
 }
@@ -35,6 +36,7 @@ export const emotionTheme = {
     grey: themeColors.grey,
   },
   fonts: {
-    outrequeBlack: "OutrequeBlack",
+    bacasime: "Bacasime Antique",
+    playfair: "Playfair Display",
   },
 };

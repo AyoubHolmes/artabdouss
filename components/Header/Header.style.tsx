@@ -5,7 +5,7 @@ export const HeaderWrapper = styled.div`
   height: 5.7rem;
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 0.7rem;
   padding: 0 2rem;
 `;
 
@@ -67,7 +67,7 @@ export const NavMenuPageHeader = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 0.7rem;
   padding: 0 2rem;
 `;
 
@@ -77,6 +77,7 @@ export const NavMenuPageContent = styled.div`
   justify-content: center;
   flex-direction: column;
   width: 100%;
+  margin-top: 1rem;
 `;
 
 export const NavMenuPageTab = styled.div`
@@ -85,7 +86,11 @@ export const NavMenuPageTab = styled.div`
   text-transform: uppercase;
   text-align: center;
   font-size: 4.5rem;
+  font-family: ${({ theme }) => theme.fonts.playfair};
   line-height: 1;
-  transition: all .8s;
+  transition: all 0.8s;
   overflow: hidden;
+  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
 `;

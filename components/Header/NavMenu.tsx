@@ -18,8 +18,8 @@ const NavMenu = () => {
           priority
           src={FilterIcon}
           alt={""}
-          height={40}
-          width={40}
+          height={20}
+          width={20}
           onClick={handleOpenNav}
           style={{
             cursor: "pointer",
