@@ -19,6 +19,7 @@ const Footer: React.FC = () => {
             <Image src={InstaIcon} alt={""} height={30} />
           </a>
         </FooterSocialLinks>
+        
       </FooterContainer>
     </FooterWrapper>
   );
