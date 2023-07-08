@@ -27,7 +27,7 @@ const NavMenuPage: React.FC<Props> = ({ handleOpenNav }) => {
     <NavMenuPageWrapper>
       <NavMenuPageHeader>
         <LogoWrapper>
-          <Image priority src={LogoImage} alt={""} height={100} width={250} />
+          <Image priority src={LogoImage} alt={""} height={100} width={170} />
         </LogoWrapper>
 
         <NavMenuWrapper>
@@ -35,8 +35,8 @@ const NavMenuPage: React.FC<Props> = ({ handleOpenNav }) => {
             priority
             src={CrossIcon}
             alt={""}
-            height={40}
-            width={40}
+            height={20}
+            width={20}
             onClick={handleOpenNav}
             style={{
               cursor: "pointer",

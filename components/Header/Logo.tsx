@@ -5,7 +5,7 @@ import { LogoWrapper } from "./Header.style";
 const Logo = () => {
   return (
     <LogoWrapper>
-      <Image priority src={LogoImage} alt={""} height={100} width={250} />
+      <Image priority src={LogoImage} alt={""} height={100} width={170} />
     </LogoWrapper>
   );
 };

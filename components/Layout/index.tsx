@@ -1,11 +1,12 @@
 import styled from "@emotion/styled";
+import Footer from "components/Footer";
 import Header from "components/Header";
 import { IntlProvider } from "react-intl";
 import { LANGUAGES, intlMessagesDispatcher } from "utils/constants";
 import { useLanguageContext } from "utils/context";
 
 const AppContentWrapper = styled.div`
-  display: flex;
+  /* display: flex; */
 `;
 
 interface LayoutProps {
@@ -22,6 +23,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     >
       <Header />
       <AppContentWrapper>{children}</AppContentWrapper>
+      <Footer />
     </IntlProvider>
   );
 };
